@@ -1,0 +1,1 @@
+exports.SMS_ACTION_REGISTER = 'register';
