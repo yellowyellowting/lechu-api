@@ -1,1 +1,1 @@
-exports.SMS_ACTION_REGISTER = 'register';
+exports.SMS_ACTION_REGISTER = 'register'; // 定义一个 register 常量，多处使用，避免写错出现bug

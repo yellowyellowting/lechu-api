@@ -1,8 +1,8 @@
 const bcrypt = require('bcrypt'); // 加密模块,对密码加密
 const jwt = require('jsonwebtoken'); // jwt模块
-const { SMS_ACTION_REGISTER } = require('../config/constant'); 
-const { tokenSecret, tokenExpire } = require('../config');
-const { isAllowResend, sendSms } = require('../utils/sms');
+const { SMS_ACTION_REGISTER } = require('../config/constant');  // 引入一个常量 register
+const { tokenSecret, tokenExpire } = require('../config'); // 导入配置， { tokenSecret, tokenExpire } 为解构方法，只取出 tokenSecret, tokenExpire 两个数据
+const { isAllowResend, sendSms } = require('../utils/sms');  // 发送验证码信息
 
 /**
  * 用户登录
@@ -20,7 +20,7 @@ exports.login = (req, res) => {
     }
 
     const User = req.models.user;
-    User.find({ mobile: mobile }, function(err, result) {   //orm 
+    User.find({ mobile: mobile }, function(err, result) {   //orm插件方法find ，查找
         if (err) {
             res.error(500, '数据库出错，' + err);
             return;
@@ -76,7 +76,7 @@ exports.register = (req, res) => {
     }
 
     const User = req.models.user;
-    User.exists({ mobile: mobile }, (err, exists) => {
+    User.exists({ mobile: mobile }, (err, exists) => {   //orm插件方法exists ，是否存在
         if (err) {
             res.error(500, '数据库出错，' + err);
             return;

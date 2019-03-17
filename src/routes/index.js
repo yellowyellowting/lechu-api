@@ -37,5 +37,6 @@ router.post('/upload/recipe', upload.uploadRecipe);
  * 爬虫相关的api
  */
 router.get('/spider/popRecipe', spider.fetchPopRecipes);
+router.get('/spider/recipeDetail', spider.fetchRecipeDetail);
 
 module.exports = router;

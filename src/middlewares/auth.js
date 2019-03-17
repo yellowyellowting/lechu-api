@@ -24,6 +24,7 @@ exports.auth = function (req, res, next) {
  * @param next
  * @returns {*}
  */
+
 exports.tryAuth = function (req, res, next) {
     var token = req.body.token || req.query.token || req.headers['x-access-token'];
     if (token) {

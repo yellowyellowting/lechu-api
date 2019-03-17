@@ -1,5 +1,5 @@
-const upload = require('jquery-file-upload-middleware');
-const { uploadUrl, uploadDir } = require('../config');
+const upload = require('jquery-file-upload-middleware'); // 文件上传中间件
+const { uploadUrl, uploadDir } = require('../config'); // 默认进入index.js文件
 
 upload.configure({
     uploadDir,
