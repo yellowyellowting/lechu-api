@@ -1,9 +1,9 @@
-const express = require('express');
+const express = require('express'); 
 const bodyParser = require('body-parser');
 const path = require('path');
-const orm = require('./middlewares/orm');
-const rest = require('./middlewares/rest');
-const routes = require('./routes');
+const orm = require('./middlewares/orm'); // 中间件
+const rest = require('./middlewares/rest');  // 失败、成功函数模块
+const routes = require('./routes'); // 路由
 const { port } = require('./config');
 
 const app = express();

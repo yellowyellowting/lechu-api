@@ -5,10 +5,10 @@ upload.configure({
     uploadDir,
     uploadUrl,
     imageVersions: {
-        thumbnail: {
-            width: 150,
-            height: 150
-        }
+        // thumbnail: {
+        //     width: 150,
+        //     height: 150
+        // }
     }
 });
 
