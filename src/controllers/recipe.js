@@ -1,4 +1,3 @@
-
 exports.pop = function (req, res) {
     const result = [
         {
@@ -103,4 +102,99 @@ exports.pop = function (req, res) {
 
 exports.rising = function (req, res) {
     
+}
+
+/**
+ * 创建菜谱
+ */
+exports.create = function (req, res) {
+    const name = req.body.name;
+    const cover = req.body.cover;
+    const description = req.body.description;
+    const steps = req.body.steps;
+    const userId = req.decoded.userId;
+    
+    if (!name) {
+        res.error(500, '菜谱名称不能为空');
+        return;
+    }
+    if (!cover) {
+        res.error(500, '菜谱封面图不能为空');
+        return;
+    }
+    if (!description) {
+        res.error(500, '菜谱描述不能为空');
+        return;
+    }
+    if (!steps || steps.length == 0) {
+        res.error(500, '菜谱步骤不能为空');
+        return;
+    }
+
+    const Recipe = req.models.recipe;
+    Recipe.create({
+        user_id: userId,
+        name: name,
+        cover: cover,
+        description: description,
+        created_at: new Date().getTime()
+    }, (err, recipe) => {
+        if (err) {
+            res.error(500, '数据库出错，' + err);
+            return;
+        }
+
+        const RecipeStep = req.models.recipeStep;
+        RecipeStep.create(steps.map(step => {
+            return {
+                recipe_id: recipe.id,
+                description: step.description,
+                pic_url: step.picUrl,
+                order: step.order,
+                created_at: new Date().getTime()
+            }
+        }), function(err, steps) {
+            if (err) {
+                res.error(500, '数据库出错，' + err);
+                return;
+            }
+
+            res.success('菜谱创建成功');
+        });
+    });
+}
+
+exports.detail = function (req, res) {
+    const id = req.query.id;
+    if (!id) {
+        res.error(500, '菜谱ID不能为空');
+        return;
+    }
+
+    const Recipe = req.models.recipe;
+    Recipe.find({ id }, (err, recipes) => {
+        if (err) {
+            res.error(500, '数据库出错，' + err);
+            return;
+        }
+
+        const recipe = recipes && recipes[0];
+        if (!recipe) {
+            res.error(500, '未找到该菜谱');
+            return;
+        }
+
+        const RecipeStep = req.models.recipeStep;
+        RecipeStep.find({ recipe_id: recipe.id }, (err, steps) => {
+            if (err) {
+                res.error(500, '数据库出错，' + err);
+                return;
+            }
+
+            res.success({
+                ...recipe,
+                steps: steps || []
+            });
+        })
+    });
 }

@@ -181,3 +181,92 @@ GET    {HOST}/recipe/pop
     ]
 }
 ```
+
+### 6.创建菜谱
+
+##### 请求地址
+
+```
+POST    {HOST}/recipe/create
+```
+
+##### 请求参数
+
+类似如下的json数据
+```
+{
+    "name": "水煮肉片（吃不够的下饭菜）", 
+    "cover": "http://i2.chuimg.com/e5b42524885b11e6b87c0242ac110003_650w_650h.jpg?imageView2/2/w/660/interlace/1/q/90", 
+    "description": "第一次吃水煮肉片是很小的时候 那时候只知道肿么会有这么好吃的菜，对胃口，够麻辣", 
+    "steps": [
+        {
+            "description": "将肉切成薄片 加入淀粉 料酒 老抽 拌匀后备用（因为我以前做完感觉肉发白 不香 所以这次抓肉的时候就放老抽 ）", 
+            "picUrl": "http://i2.chuimg.com/d8d1966499e211e69ce70242ac110002_650w_650h.jpg?imageView2/2/w/300/interlace/1/q/90", 
+            "order": 1
+        },
+        {
+            "description": "我喜欢带豆腐皮的 切丝 用开水焯一下备用", 
+            "picUrl": "http://i2.chuimg.com/d88a94b299e211e69ce70242ac110002_650w_650h.jpg?imageView2/2/w/300/interlace/1/q/90", 
+            "order": 2
+        },
+    ]
+}
+```
+
+##### 请求头
+
+头名称 | 头描述
+---|---
+Content-Type | 内容类型，必须为：application/json
+x-access-token | 登录获取到的身份令牌（token）
+
+##### 响应内容
+
+```
+{
+    "code": 0,
+    "message": "api success",
+    "data": "菜谱创建成功"
+}
+```
+
+### 7.获取菜谱详情
+
+##### 请求地址
+
+```
+GET    {HOST}/recipe/detail
+```
+
+##### 请求参数
+
+参数名称 | 参数描述
+---|---
+id | 菜谱ID
+
+##### 响应内容
+
+```
+{
+    "code": 0,
+    "message": "api success",
+    "data": {
+        "id": 3,
+        "user_id": 10,
+        "name": "水煮肉片（吃不够的下饭菜）",
+        "cover": "http://i2.chuimg.com/e5b42524885b11e6b87c0242ac110003_650w_650h.jpg?imageView2/2/w/660/interlace/1/q/90",
+        "description": "第一次吃水煮肉片是很小的时候，那时候只知道，哇！ 肿么会有这么好吃的菜，对胃口，够麻辣",
+        "created_at": 1552805160343,
+        "steps": [
+            {
+                "id": 2,
+                "recipe_id": 3,
+                "description": "将肉切成薄片 加入淀粉 料酒 老抽 拌匀后备用（因为我以前做完感觉肉发白 不香 所以这次抓肉的时候就放老抽 ）",
+                "pic_url": "http://i2.chuimg.com/d8d1966499e211e69ce70242ac110002_650w_650h.jpg?imageView2/2/w/300/interlace/1/q/90",
+                "order": 1,
+                "created_at": 1552805160362
+            },
+        ]
+    }
+}
+```

@@ -1,12 +1,5 @@
+//请求成功的函数，转化成对象
 function success(data) {
-    if (this.isJsonp && this.isJsonp == true) {
-        return this.jsonp({
-            code: 0,
-            message: 'api success',
-            data
-        });
-    }
-
     return this.json({
         code: 0,
         message: 'api success',
@@ -14,16 +7,10 @@ function success(data) {
     });
 }
 
+//请求失败的函数
 function error(code, message) {
     code = code || -1;
     message = message || 'api error';
-
-    if (this.isJsonp && this.isJsonp == true) {
-        return this.jsonp({
-            code,
-            message
-        });
-    }
 
     return this.json({
         code,
@@ -31,7 +18,7 @@ function error(code, message) {
     });
 }
 
-// api middleware
+// api middleware 中间件
 module.exports = function (req, res, next) {
 
     res.setHeader('Access-Control-Allow-Origin', '*');

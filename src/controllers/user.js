@@ -1,6 +1,6 @@
-const bcrypt = require('bcrypt');
-const jwt = require('jsonwebtoken');
-const { SMS_ACTION_REGISTER } = require('../config/constant');
+const bcrypt = require('bcrypt'); // 加密模块,对密码加密
+const jwt = require('jsonwebtoken'); // jwt模块
+const { SMS_ACTION_REGISTER } = require('../config/constant'); 
 const { tokenSecret, tokenExpire } = require('../config');
 const { isAllowResend, sendSms } = require('../utils/sms');
 
@@ -20,7 +20,7 @@ exports.login = (req, res) => {
     }
 
     const User = req.models.user;
-    User.find({ mobile: mobile }, function(err, result) {
+    User.find({ mobile: mobile }, function(err, result) {   //orm 
         if (err) {
             res.error(500, '数据库出错，' + err);
             return;
