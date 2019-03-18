@@ -6,42 +6,42 @@ const axios = require('axios');
  * 爬取流行菜谱数据
  */
 exports.fetchPopRecipes = (req, res) => {
-    axios.get('http://www.xiachufang.com/')
-    .then(({ data }) => {
-        let $ = cheerio.load(data, {
-            decodeEntities: false,
-        });
-        let result = scrape.scrapeHTML($, {
-            popRecipes: {
-                listItem: ".pop-recipes ul li",
-                data: {
-                    id: {
-                        selector: '.cover',
-                        attr: 'href',
-                        convert: x => x.match(/\/(\d+)\//)[1]
-                    },
-                    name: '.name a',
-                    thumbnail: {
-                        selector: '.cover img',
-                        attr: 'src'
-                    },
-                    cookId: {
-                        selector: '.stats a',
-                        attr: 'href',
-                        convert: x => x.match(/\/(\d+)\//)[1]
-                    },
-                    cookName: '.stats a',
-                    stats: '.stats span'
+    axios.get('http://www.xiachufang.com/') //后端请求下厨房网站抓取信息
+        .then(({ data }) => {
+            let $ = cheerio.load(data, {
+                decodeEntities: false,
+            });
+            let result = scrape.scrapeHTML($, {
+                popRecipes: {
+                    listItem: ".pop-recipes ul li",
+                    data: {
+                        id: {
+                            selector: '.cover',
+                            attr: 'href',
+                            convert: x => x.match(/\/(\d+)\//)[1]
+                        },
+                        name: '.name a',
+                        thumbnail: {
+                            selector: '.cover img',
+                            attr: 'src'
+                        },
+                        cookId: {
+                            selector: '.stats a',
+                            attr: 'href',
+                            convert: x => x.match(/\/(\d+)\//)[1]
+                        },
+                        cookName: '.stats a',
+                        stats: '.stats span'
+                    }
                 }
-            }
-        });
-        res.success(result.popRecipes);
-    })
-    .catch(err => res.error(err));
+            });
+            res.success(result.popRecipes);
+        })
+        .catch(err => res.error(err));
 }
 
 /**
- * 爬取流行菜谱数据
+ * 爬取详情页菜谱数据
  */
 exports.fetchRecipeDetail = (req, res) => {
     const recipeId = req.query.id;
@@ -51,37 +51,37 @@ exports.fetchRecipeDetail = (req, res) => {
     }
 
     axios.get('https://www.xiachufang.com/recipe/' + recipeId)
-    .then(({ data }) => {
-        let $ = cheerio.load(data, {
-            decodeEntities: false,
-        });
-        let result = scrape.scrapeHTML($, {
-            name: '.page-title',
-            author: '.author a span',
-            cover: {
-                selector: '.cover img',
-                attr: 'src'
-            },
-            description: '.desc',
-            steps: {
-                listItem: '.steps ol li',
-                data: {
-                    description: '.text',
-                    pic_url: {
-                        selector: 'img',
-                        attr: 'src'
+        .then(({ data }) => {
+            let $ = cheerio.load(data, {
+                decodeEntities: false,
+            });
+            let result = scrape.scrapeHTML($, {
+                name: '.page-title',
+                author: '.author a span',
+                cover: {
+                    selector: '.cover img',
+                    attr: 'src'
+                },
+                description: '.desc',
+                steps: {
+                    listItem: '.steps ol li',
+                    data: {
+                        description: '.text',
+                        pic_url: {
+                            selector: 'img',
+                            attr: 'src'
+                        }
+                    }
+                },
+                comments: {
+                    listItem: '.question-list li',
+                    data: {
+                        author: '.right-top.info a',
+                        content: '.right-bottom'
                     }
                 }
-            },
-            comments: {
-                listItem: '.question-list li',
-                data: {
-                    author: '.right-top.info a',
-                    content: '.right-bottom'
-                }
-            }
-        });
-        res.success(result);
-    })
-    .catch(err => res.error(err));
+            });
+            res.success(result);
+        })
+        .catch(err => res.error(err));
 }

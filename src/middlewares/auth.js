@@ -1,4 +1,4 @@
-const { tokenSecret } = require('../config');
+const { tokenSecret } = require('../config'); // 配置信息
 const jwt = require('jsonwebtoken');
 
 exports.auth = function (req, res, next) {

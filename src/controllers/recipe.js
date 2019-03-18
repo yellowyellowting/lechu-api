@@ -102,7 +102,7 @@ exports.pop = function (req, res) {
 }
 
 exports.rising = function (req, res) {
-    
+
 }
 
 /**
@@ -114,7 +114,7 @@ exports.create = function (req, res) {
     const description = req.body.description;
     const steps = req.body.steps;
     const userId = req.decoded.userId;
-    
+
     if (!name) {
         res.error(500, '菜谱名称不能为空');
         return;
@@ -154,13 +154,16 @@ exports.create = function (req, res) {
                 order: step.order,
                 created_at: new Date().getTime()
             }
-        }), function(err, steps) {
+        }), function (err, steps) {
             if (err) {
                 res.error(500, '数据库出错，' + err);
                 return;
             }
 
-            res.success('菜谱创建成功');
+            res.success({
+                ...recipe,
+                steps: steps || []
+            });
         });
     });
 }

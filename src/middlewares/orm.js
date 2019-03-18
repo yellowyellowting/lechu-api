@@ -1,6 +1,7 @@
-const orm = require('orm');
-const { db } = require('../config');
+const orm = require('orm'); //中间件
+const { db } = require('../config'); //配置信息
 
+// 中间件的形式跟express结合,将数据库表映射
 module.exports = orm.express(`mysql://${db.username}:${db.password}@${db.host}/${db.database}`, {
     define: function (db, models, next) {
         models.user = db.define("user", {
