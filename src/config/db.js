@@ -2,7 +2,7 @@
 const db = {
     host: 'localhost',
     username: 'root',
-    password: '123456',
+    password: 'fanjun',
     database: 'lechu'
 };
 
