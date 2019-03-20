@@ -55,4 +55,9 @@ router.post('/upload/recipe', upload.uploadRecipe);
 router.get('/spider/popRecipe', spider.fetchPopRecipes);
 router.get('/spider/recipeDetail', spider.fetchRecipeDetail);
 
+/**
+ * 主页列表
+ */
+router.get('/')
+
 module.exports = router;
