@@ -28,7 +28,7 @@ router.get('/recipe/rising', recipe.rising); //新秀，未完成
 /**
  * 评论相关的api
  */
-router.post('/comment/create', authMiddleware.auth, comment.create);
+router.post('/comment/create', comment.create);  //结束时加上“   authMiddleware.auth,   ” 重要
 router.get('/comment/list', comment.list);
 
 /**
