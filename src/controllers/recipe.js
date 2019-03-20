@@ -2,7 +2,7 @@
 exports.pop = function (req, res) {
     const result = [
         {
-            "id": "102122269",
+            "id": "103708641",
             "name": "【电饭锅】一只番茄饭 番茄拌饭",
             "thumbnail": "http://i2.chuimg.com/a4a8e165867d4bf486a404a879db2e9a_1539w_1154h.jpg?imageView2/1/w/215/h/136/interlace/1/q/90",
             "cookId": "112064570",
@@ -222,7 +222,7 @@ exports.pop = function (req, res) {
             "des": "每张照片都有自己的故事"
         },
         {
-            "id": "103704010",
+            "id": "102276846",
             "name": "香烤鸡翅",
             "thumbnail": "http://i1.chuimg.com/022d207fc8fa4d3d8c2e63d617045e15_6000w_4000h.jpg@2o_50sh_1pr_1l_235w_138h_1c_1e_90q_1wh",
             "cookId": "120967814",
@@ -239,7 +239,7 @@ exports.pop = function (req, res) {
             "des": "每张照片都有自己的故事"
         },
         {
-            "id": "102891301",
+            "id": "103708646",
             "name": "平菇青椒炒鸡蛋 好吃又营养的超快手家常菜",
             "thumbnail": "http://i1.chuimg.com/624264364e2541b2895f4cfc2c2b32d7_4288w_2848h.jpg@2o_50sh_1pr_1l_235w_138h_1c_1e_90q_1wh",
             "cookId": "122079365",
@@ -256,7 +256,7 @@ exports.pop = function (req, res) {
             "des": "每张照片都有自己的故事"
         },
         {
-            "id": "102295729",
+            "id": "103708647",
             "name": "盘丝饼",
             "thumbnail": "http://i1.chuimg.com/4a30ea4e407311e7947d0242ac110002_720w_1280h.jpg@2o_50sh_1pr_1l_235w_138h_1c_1e_90q_1wh",
             "cookId": "101553997",
@@ -273,7 +273,7 @@ exports.pop = function (req, res) {
             "des": "每张照片都有自己的故事"
         },
         {
-            "id": "102202490",
+            "id": "103708648",
             "name": "『1234糖醋排骨』",
             "thumbnail": "http://i2.chuimg.com/27591c3c296511e7bc9d0242ac110002_1324w_1984h.jpg?imageView2/1/w/235/h/138/interlace/1/q/90",
             "cookId": "107144295",
@@ -290,7 +290,7 @@ exports.pop = function (req, res) {
             "des": "每张照片都有自己的故事"
         },
         {
-            "id": "102306288",
+            "id": "103708649",
             "name": "饭店必点的干锅花菜，是这么做出来的。",
             "thumbnail": "http://i1.chuimg.com/0e8f9a644ab211e7947d0242ac110002_1000w_666h.jpg@2o_50sh_1pr_1l_235w_138h_1c_1e_90q_1wh",
             "cookId": "100351317",
@@ -307,7 +307,7 @@ exports.pop = function (req, res) {
             "des": "每张照片都有自己的故事"
         },
         {
-            "id": "100284081",
+            "id": "103708650",
             "name": "荷兰宝贝 Dutch Baby",
             "thumbnail": "http://i2.chuimg.com/9d43282c885011e6a9a10242ac110002_1800w_1200h.jpg?imageView2/1/w/235/h/138/interlace/1/q/90",
             "cookId": "10666666",
@@ -324,9 +324,9 @@ exports.pop = function (req, res) {
             "des": "每张照片都有自己的故事"
         },
         {
-            "id": "103708641",
+            "id": "103708651",
             "name": "超级绵~奶白吐司",
-            "thumbnail": "http://i2.chuimg.com/dfd1c610155b47ef8418eac4db333f43_1650w_1100h.jpg?imageView2/1/w/235/h/138/interlace/1/q/90",
+            "thumbnail": "http://i1.chuimg.com/ff1337128b4911e6a9a10242ac110002_1080w_1080h.jpg@2o_50sh_1pr_1l_660w_90q_1wh",
             "cookId": "10585157",
             "cookName": "啊呜511",
             "stats": "42 做过",
@@ -481,6 +481,7 @@ exports.create = function (req, res) {
 
 exports.detail = function (req, res) {
     const id = req.query.id;
+    console.log(id);
     if (!id) {
         res.error(500, '菜谱ID不能为空');
         return;
@@ -511,5 +512,22 @@ exports.detail = function (req, res) {
                 steps: steps || []
             });
         })
+    });
+}
+
+
+exports.selfrecipe = function (req, res) {
+    const id = req.query.id;
+    const userId = req.decoded.userId;
+    console.log(id);
+
+    const Recipe = req.models.recipe;
+    Recipe.find({ user_id: userId }, (err, recipes) => {
+        if (err) {
+            res.error(500, '数据库出错，' + err);
+            return;
+        }
+
+        res.success({ recipes });
     });
 }
