@@ -26,7 +26,7 @@ CREATE TABLE `recipe` (
   `user_id` bigint(20) NOT NULL COMMENT '菜谱创建者ID',
   `name` varchar(200) NOT NULL DEFAULT '' COMMENT '菜谱名称',
   `cover` varchar(200) NOT NULL COMMENT '菜谱封面',
-  `description` varchar(400) DEFAULT NULL COMMENT '菜谱描述',
+  `description` varchar(255) DEFAULT NULL COMMENT '菜谱描述',
   `created_at` bigint(20) NOT NULL COMMENT '菜谱创建时间',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
@@ -37,9 +37,9 @@ CREATE TABLE `recipe` (
 DROP TABLE IF EXISTS `recipe_comment`;
 CREATE TABLE `recipe_comment` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '菜谱评论ID',
-  `user_id` bigint(20) NOT NULL COMMENT '菜谱评论者的用户ID',
+  `user_id` varchar(255) NOT NULL COMMENT '菜谱评论者的用户ID',
   `recipe_id` bigint(20) NOT NULL COMMENT '菜谱ID',
-  `content` varchar(400) NOT NULL COMMENT '菜谱评论内容',
+  `content` varchar(255) NOT NULL COMMENT '菜谱评论内容',
   `created_at` bigint(20) NOT NULL COMMENT '菜谱评论创建时间',
   PRIMARY KEY (`id`,`content`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
@@ -51,7 +51,7 @@ DROP TABLE IF EXISTS `recipe_step`;
 CREATE TABLE `recipe_step` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '菜谱步骤ID',
   `recipe_id` bigint(20) NOT NULL COMMENT '菜谱ID',
-  `description` varchar(400) NOT NULL COMMENT '步骤描述',
+  `description` varchar(255) NOT NULL COMMENT '步骤描述',
   `pic_url` varchar(200) NOT NULL COMMENT '步骤图片地址',
   `order` int(11) NOT NULL COMMENT '步骤数序',
   `created_at` bigint(20) NOT NULL COMMENT '步骤创建时间',
