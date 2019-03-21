@@ -24,12 +24,15 @@ router.get('/recipe/detail', recipe.detail);  // 创建菜谱，已完成
 router.get('/recipe/self', authMiddleware.auth, recipe.selfrecipe) // 获取用户名
 router.get('/recipe/pop', recipe.pop);  // 流行菜谱，已完成
 router.get('/recipe/rising', recipe.rising); //新秀，未完成
+router.get('/recipe/collection', recipe.collection);
+router.get('/recipe/getcollection', recipe.getcollection);
 
 /**
  * 评论相关的api
  */
 router.post('/comment/create', comment.create);  //结束时加上“   authMiddleware.auth,   ” 重要
 router.get('/comment/list', comment.list);
+
 
 /**
  * 上传相关的api

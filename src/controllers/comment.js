@@ -5,8 +5,8 @@
 exports.create = function (req, res) {
     const content = req.body.content;
     const recipeId = req.body.recipeId;
-    const userId = req.body.userId;
-    
+    const userId = req.decoded.userId;
+
     if (!content) {
         res.error(500, '评论内容不能为空');
         return;

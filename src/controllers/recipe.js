@@ -2,9 +2,9 @@
 exports.pop = function (req, res) {
     const result = [
         {
-            "id": "103708641",
-            "name": "【电饭锅】一只番茄饭 番茄拌饭",
-            "thumbnail": "http://i2.chuimg.com/a4a8e165867d4bf486a404a879db2e9a_1539w_1154h.jpg?imageView2/1/w/215/h/136/interlace/1/q/90",
+            "id": "103708663",
+            "name": "椰奶吐司",
+            "thumbnail": "http://i1.chuimg.com/349e8bfc5cf3424681b5cba84f7b92e6_1080w_864h.jpg@2o_50sh_1pr_1l_660w_90q_1wh",
             "cookId": "112064570",
             "cookName": "李果然",
             "stats": "1806 做过",
@@ -28,7 +28,7 @@ exports.pop = function (req, res) {
         {
             "id": "103708642",
             "name": "香烤鸡翅",
-            "thumbnail": "http://i2.chuimg.com/a4a8e165867d4bf486a404a879db2e9a_1539w_1154h.jpg?imageView2/1/w/215/h/136/interlace/1/q/90",
+            "thumbnail": "http://i1.chuimg.com/af2a802a87e811e6a9a10242ac110002_800w_533h.jpg@2o_50sh_1pr_1l_660w_90q_1wh",
             "cookId": "120967814",
             "cookName": "博世家电",
             "stats": "11 做过",
@@ -52,7 +52,7 @@ exports.pop = function (req, res) {
         {
             "id": "103708643",
             "name": "平菇青椒炒鸡蛋 好吃又营养的超快手家常菜",
-            "thumbnail": "http://i2.chuimg.com/a4a8e165867d4bf486a404a879db2e9a_1539w_1154h.jpg?imageView2/1/w/215/h/136/interlace/1/q/90",
+            "thumbnail": "http://i1.chuimg.com/af2a802a87e811e6a9a10242ac110002_800w_533h.jpg@2o_50sh_1pr_1l_660w_90q_1wh",
             "cookId": "122079365",
             "cookName": "千寻树",
             "stats": "252 做过",
@@ -76,7 +76,7 @@ exports.pop = function (req, res) {
         {
             "id": "103708644",
             "name": "盘丝饼",
-            "thumbnail": "http://i1.chuimg.com/4a30ea4e407311e7947d0242ac110002_720w_1280h.jpg@2o_50sh_1pr_1l_235w_138h_1c_1e_90q_1wh",
+            "thumbnail": "http://i1.chuimg.com/af2a802a87e811e6a9a10242ac110002_800w_533h.jpg@2o_50sh_1pr_1l_660w_90q_1wh",
             "cookId": "101553997",
             "cookName": "食肆巷子",
             "stats": "845 做过",
@@ -98,9 +98,9 @@ exports.pop = function (req, res) {
             }
         },
         {
-            "id": "103708645",
-            "name": "『1234糖醋排骨』",
-            "thumbnail": "http://i2.chuimg.com/27591c3c296511e7bc9d0242ac110002_1324w_1984h.jpg?imageView2/1/w/235/h/138/interlace/1/q/90",
+            "id": "103708661",
+            "name": "《Tinrry＋》Tinrry教你做分蛋海绵蛋糕",
+            "thumbnail": "http://i1.chuimg.com/fd297e11d67a4bc3b03e5597f3ec1637_770w_420h.jpg@2o_50sh_1pr_1l_660w_90q_1wh",
             "cookId": "107144295",
             "cookName": "o橙小橙o",
             "stats": "179 做过",
@@ -124,7 +124,7 @@ exports.pop = function (req, res) {
         {
             "id": "103708646",
             "name": "饭店必点的干锅花菜，是这么做出来的。",
-            "thumbnail": "http://i1.chuimg.com/0e8f9a644ab211e7947d0242ac110002_1000w_666h.jpg@2o_50sh_1pr_1l_235w_138h_1c_1e_90q_1wh",
+            "thumbnail": "http://i2.chuimg.com/cca1ae7a229411e7bc9d0242ac110002_3264w_2448h.jpg?imageView2/2/w/660/interlace/1/q/90",
             "cookId": "100351317",
             "cookName": "小美的美食",
             "stats": "314 做过",
@@ -146,9 +146,9 @@ exports.pop = function (req, res) {
             }
         },
         {
-            "id": "103708647",
-            "name": "荷兰宝贝 Dutch Baby",
-            "thumbnail": "http://i2.chuimg.com/9d43282c885011e6a9a10242ac110002_1800w_1200h.jpg?imageView2/1/w/235/h/138/interlace/1/q/90",
+            "id": "103708660",
+            "name": "超级好吃的懒人榴莲酥",
+            "thumbnail": "http://i2.chuimg.com/662ce02a8ad611e6b87c0242ac110003_1536w_2048h.jpg?imageView2/2/w/660/interlace/1/q/90",
             "cookId": "10666666",
             "cookName": "阿May又改名儿了",
             "stats": "508 做过",
@@ -170,9 +170,9 @@ exports.pop = function (req, res) {
             }
         },
         {
-            "id": "103708648",
-            "name": "超级绵~奶白吐司",
-            "thumbnail": "http://i2.chuimg.com/dfd1c610155b47ef8418eac4db333f43_1650w_1100h.jpg?imageView2/1/w/235/h/138/interlace/1/q/90",
+            "id": "103708655",
+            "name": "新晋网红【杏花楼 咸蛋黄肉松青团】",
+            "thumbnail": "http://i2.chuimg.com/28c1c0228a9d11e6a9a10242ac110002_1000w_667h.jpg?imageView2/2/w/660/interlace/1/q/90",
             "cookId": "10585157",
             "cookName": "啊呜511",
             "stats": "42 做过",
@@ -186,9 +186,9 @@ exports.pop = function (req, res) {
             "des": "每张照片都有自己的故事"
         },
         {
-            "id": "103708649",
-            "name": "《Tinrry下午茶》教你做芒果班戟和芒果千层饼",
-            "thumbnail": "http://i2.chuimg.com/6d9419bc883f11e6b87c0242ac110003_578w_420h.jpg?imageView2/1/w/235/h/138/interlace/1/q/90",
+            "id": "103708656",
+            "name": "木瓜苹果思慕雪",
+            "thumbnail": "http://i2.chuimg.com/b36b635b00f34e91b7bbd408c9a26c5e_6000w_4000h.jpg?imageView2/2/w/660/interlace/1/q/90",
             "cookId": "10411331",
             "cookName": "Tinrry甜悦",
             "stats": "23160 做过",
@@ -204,8 +204,8 @@ exports.pop = function (req, res) {
         },
         {
             "id": "103708650",
-            "name": "蛋糕卷，肉松蛋糕卷，网红贝贝肉松卷",
-            "thumbnail": "http://i2.chuimg.com/e58cfcce29f5471d88f62bc75686dc09_1280w_854h.jpg?imageView2/1/w/235/h/138/interlace/1/q/90",
+            "name": "香煎豆腐(烧烤铁板味)",
+            "thumbnail": "http://i1.chuimg.com/525d4bd7433d40698e99041ff55532da_1080w_810h.jpg@2o_50sh_1pr_1l_660w_90q_1wh",
             "cookId": "126334531",
             "cookName": "美丽女神经",
             "stats": "91 做过",
@@ -221,8 +221,8 @@ exports.pop = function (req, res) {
         },
         {
             "id": "103708651",
-            "name": "自制肉松小贝",
-            "thumbnail": "http://i2.chuimg.com/d8e9d0522f4311e7bc9d0242ac110002_1620w_1080h.jpg?imageView2/1/w/235/h/138/interlace/1/q/90",
+            "name": "轻乳酪蛋糕（低油低糖版）",
+            "thumbnail": "http://i1.chuimg.com/ff1337128b4911e6a9a10242ac110002_1080w_1080h.jpg@2o_50sh_1pr_1l_660w_90q_1wh",
             "cookId": "105784662",
             "cookName": "糯米的厨房",
             "stats": "195 做过",
@@ -237,9 +237,9 @@ exports.pop = function (req, res) {
             "des": "每张照片都有自己的故事"
         },
         {
-            "id": "101814068",
-            "name": "不回缩杯子蛋糕cupcake",
-            "thumbnail": "http://i2.chuimg.com/74fab86c8afd11e6b87c0242ac110003_640w_643h.jpg?imageView2/1/w/235/h/138/interlace/1/q/90",
+            "id": "103708652",
+            "name": "不菠菜鸡蛋饼",
+            "thumbnail": "http://i2.chuimg.com/3ad5fcd48a4c11e6a9a10242ac110002_400w_300h.jpg?imageView2/2/w/660/interlace/1/q/90",
             "cookId": "106652802",
             "cookName": "姜诗cc",
             "stats": "3666 做过",
@@ -254,7 +254,7 @@ exports.pop = function (req, res) {
             "des": "每张照片都有自己的故事"
         },
         {
-            "id": "102122269",
+            "id": "103708653",
             "name": "【电饭锅】一只番茄饭 番茄拌饭",
             "thumbnail": "http://i1.chuimg.com/a9e101fa8b7311e6a9a10242ac110002_1968w_2624h.jpg@2o_50sh_1pr_1l_235w_138h_1c_1e_90q_1wh",
             "cookId": "112064570",
@@ -271,7 +271,7 @@ exports.pop = function (req, res) {
             "des": "每张照片都有自己的故事"
         },
         {
-            "id": "102276846",
+            "id": "103708654",
             "name": "香烤鸡翅",
             "thumbnail": "http://i1.chuimg.com/022d207fc8fa4d3d8c2e63d617045e15_6000w_4000h.jpg@2o_50sh_1pr_1l_235w_138h_1c_1e_90q_1wh",
             "cookId": "120967814",
@@ -288,9 +288,9 @@ exports.pop = function (req, res) {
             "des": "每张照片都有自己的故事"
         },
         {
-            "id": "103708646",
-            "name": "平菇青椒炒鸡蛋 好吃又营养的超快手家常菜",
-            "thumbnail": "http://i1.chuimg.com/624264364e2541b2895f4cfc2c2b32d7_4288w_2848h.jpg@2o_50sh_1pr_1l_235w_138h_1c_1e_90q_1wh",
+            "id": "103708655",
+            "name": "新晋网红【杏花楼 咸蛋黄肉松青团】",
+            "thumbnail": "http://i2.chuimg.com/28c1c0228a9d11e6a9a10242ac110002_1000w_667h.jpg?imageView2/2/w/660/interlace/1/q/90",
             "cookId": "122079365",
             "cookName": "千寻树",
             "stats": "252 做过",
@@ -305,9 +305,9 @@ exports.pop = function (req, res) {
             "des": "每张照片都有自己的故事"
         },
         {
-            "id": "103708647",
+            "id": "103708656",
             "name": "盘丝饼",
-            "thumbnail": "http://i1.chuimg.com/4a30ea4e407311e7947d0242ac110002_720w_1280h.jpg@2o_50sh_1pr_1l_235w_138h_1c_1e_90q_1wh",
+            "thumbnail": "http://i2.chuimg.com/b36b635b00f34e91b7bbd408c9a26c5e_6000w_4000h.jpg?imageView2/2/w/660/interlace/1/q/90",
             "cookId": "101553997",
             "cookName": "食肆巷子",
             "stats": "845 做过",
@@ -462,7 +462,15 @@ exports.pop = function (req, res) {
 }
 
 exports.rising = function (req, res) {
+    const Recipe = req.models.recipe;
+    Recipe.find(['look_count', 'Z'], 10, (err, recipes) => {
+        if (err) {
+            res.error(500, '数据库出错，' + err);
+            return;
+        }
 
+        res.success(recipes);
+    });
 }
 
 /**
@@ -556,9 +564,17 @@ exports.detail = function (req, res) {
                 return;
             }
 
-            res.success({
-                ...recipe,
-                steps: steps || []
+            recipe.look_count = recipe.look_count + 1;
+            recipe.save(function(err) {
+                if (err) {
+                    res.error(500, '数据库出错，' + err);
+                    return;
+                }
+
+                res.success({
+                    ...recipe,
+                    steps: steps || []
+                });
             });
         })
     });
@@ -578,5 +594,62 @@ exports.selfrecipe = function (req, res) {
         }
 
         res.success({ recipes });
+    });
+}
+
+//创建收藏
+exports.collection = function (req, res) {
+    const id = req.query.id;
+    console.log(id);
+    const name = req.query.name;
+    const cover = req.query.cover;
+    const collectionMenu = req.query.collectionMenu;
+    const collectionDerection = req.query.collectionDerection;
+    if (!id) {
+        res.error(500, 'id不能为空');
+        return;
+    }
+    if (!name) {
+        res.error(500, '菜谱名称不能为空');
+        return;
+    }
+    if (!cover) {
+        res.error(500, '菜谱封面图不能为空');
+        return;
+    }
+    if (!collectionMenu) {
+        res.error(500, '菜谱封面图不能为空');
+        return;
+    }
+    if (!collectionDerection) {
+        res.error(500, '菜谱封面图不能为空');
+        return;
+    }
+
+    const RecipeCollection = req.models.RecipeCollection;
+    RecipeCollection.create({
+        id: id,
+        name: name,
+        cover: cover,
+        menu: collectionMenu,
+        derection: collectionDerection,
+    }, (err, RecipeCollections) => {
+        if (err) {
+            res.error(500, '数据库出错，' + err);
+            return;
+        }
+        res.success(RecipeCollections);
+    });
+}
+
+// 获取收藏
+exports.getcollection = function (req, res) {
+    const RecipeCollection = req.models.RecipeCollection;
+    RecipeCollection.find((err, RecipeCollections) => {
+        if (err) {
+            res.error(500, '数据库出错，' + err);
+            return;
+        }
+        res.success(RecipeCollections);
     });
 }

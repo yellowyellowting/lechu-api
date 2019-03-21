@@ -1,4 +1,4 @@
-const orm = require('orm'); //中间件
+const orm = require('orm'); 
 const { db } = require('../config'); //配置信息
 
 // 中间件的形式跟express结合,将数据库表映射
@@ -27,6 +27,7 @@ module.exports = orm.express(`mysql://${db.username}:${db.password}@${db.host}/$
             cover: String,
             description: String,
             created_at: Number,
+            look_count: Number
         });
         models.recipeStep = db.define("recipe_step", {
             id: { type: 'serial', key: true },
@@ -42,6 +43,13 @@ module.exports = orm.express(`mysql://${db.username}:${db.password}@${db.host}/$
             recipe_id: Number,
             content: String,
             created_at: Number,
+        });
+        models.RecipeCollection = db.define("Recipe_collection", {
+            id: { type: 'serial', key: true },
+            name: String,
+            cover: String,
+            menu: String,
+            derection: String,
         });
         next();
     }

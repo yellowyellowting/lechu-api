@@ -40,7 +40,7 @@ app.use(routes);
 /**
  * 静态资源路由
  */
-app.use(express.static(path.join(__dirname, '../public')))
+app.use(express.static(path.join(__dirname, '../public')))  // Express目前唯一内置的一个中间件。用来处理静态资源文件。
 
 /**
  * 启动服务器
