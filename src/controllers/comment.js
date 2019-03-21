@@ -7,7 +7,7 @@ exports.create = function (req, res) {
     const recipeId = req.body.recipeId;
     const username = req.body.username;
     const userId = req.decoded.userId;
-    
+
     if (!content) {
         res.error(500, '评论内容不能为空');
         return;
@@ -32,7 +32,7 @@ exports.create = function (req, res) {
         }
 
         res.success(comment);
-        
+
     });
 }
 
@@ -41,7 +41,7 @@ exports.create = function (req, res) {
  */
 exports.list = function (req, res) {
     const recipeId = req.query.recipeId;
-    // console.log(recipeId)
+    console.log(recipeId)
     if (!recipeId) {
         res.error(500, '菜谱ID不能为空');
         return;

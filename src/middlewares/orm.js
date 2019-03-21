@@ -45,7 +45,7 @@ module.exports = orm.express(`mysql://${db.username}:${db.password}@${db.host}/$
             created_at: Number,
             user_name: String,
         });
-        models.RecipeCollection = db.define("Recipe_collection", {
+        models.recipeCollection = db.define("recipe_collection", {
             id: { type: 'serial', key: true },
             name: String,
             cover: String,

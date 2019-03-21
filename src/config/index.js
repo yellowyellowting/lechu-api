@@ -10,5 +10,5 @@ module.exports = {
     tokenSecret: 'lechu',
     tokenExpire: 3600 * 24 * 7,
     uploadUrl: '/uploads',
-    uploadDir: path.resolve(__dirname, '../../public/uploads'),
+    uploadDir: path.resolve(__dirname, '../../public/uploads'), //把图片移动到指定的目录，这个目录需要是绝对路径, path.resolve()方法可以将路径或者路径片段解析成绝对路径,__dirname是__directory+name的缩写
 };

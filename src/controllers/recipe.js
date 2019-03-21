@@ -17,12 +17,12 @@ exports.pop = function (req, res) {
             },
             "title": "#正儿八经的做个蛋糕#",
             "des": "每年总要吃几次蛋糕啊！",
-            "zp":{
-                "photo":"http://img4.imgtn.bdimg.com/it/u=3188610320,3791162340&fm=26&gp=0.jpg",
-                "username":'悦己2016',
-                "watchNum":'123',
-                "menu":'46',
-                "zpNum":'234'
+            "zp": {
+                "photo": "http://img4.imgtn.bdimg.com/it/u=3188610320,3791162340&fm=26&gp=0.jpg",
+                "username": '悦己2016',
+                "watchNum": '123',
+                "menu": '46',
+                "zpNum": '234'
             }
         },
         {
@@ -41,12 +41,12 @@ exports.pop = function (req, res) {
             },
             "title": "#面包儿进行曲#",
             "des": "喜欢吃粗娘的孩纸 肿么可以不会做面包呢~~",
-            "zp":{
-                "photo":"http://img5.imgtn.bdimg.com/it/u=2470461076,2763675581&fm=26&gp=0.jpg",
-                "username":'风清扬',
-                "watchNum":'263',
-                "menu":'15',
-                "zpNum":'23'
+            "zp": {
+                "photo": "http://img5.imgtn.bdimg.com/it/u=2470461076,2763675581&fm=26&gp=0.jpg",
+                "username": '风清扬',
+                "watchNum": '263',
+                "menu": '15',
+                "zpNum": '23'
             }
         },
         {
@@ -65,12 +65,12 @@ exports.pop = function (req, res) {
             },
             "title": "#花生家不定性早餐抽风日常#",
             "des": "我随行做，你随性看。",
-            "zp":{
-                "photo":"http://img2.imgtn.bdimg.com/it/u=1032554322,2365198028&fm=26&gp=0.jpg",
-                "username":'精灵鬼',
-                "watchNum":'1333',
-                "menu":'35',
-                "zpNum":'167'
+            "zp": {
+                "photo": "http://img2.imgtn.bdimg.com/it/u=1032554322,2365198028&fm=26&gp=0.jpg",
+                "username": '精灵鬼',
+                "watchNum": '1333',
+                "menu": '35',
+                "zpNum": '167'
             }
         },
         {
@@ -89,12 +89,12 @@ exports.pop = function (req, res) {
             },
             "title": "#春天的滋味#",
             "des": "从南到北，春天急急地赶路，到华北，已是稍纵即逝，",
-            "zp":{
-                "photo":"http://img4.imgtn.bdimg.com/it/u=3638963425,188168073&fm=26&gp=0.jpg",
-                "username":'伊人丁丁',
-                "watchNum":'2793',
-                "menu":'57',
-                "zpNum":'7'
+            "zp": {
+                "photo": "http://img4.imgtn.bdimg.com/it/u=3638963425,188168073&fm=26&gp=0.jpg",
+                "username": '伊人丁丁',
+                "watchNum": '2793',
+                "menu": '57',
+                "zpNum": '7'
             }
         },
         {
@@ -113,12 +113,12 @@ exports.pop = function (req, res) {
             },
             "title": "#时间知道#",
             "des": "是日，远远分享",
-            "zp":{
-                "photo":"http://img1.imgtn.bdimg.com/it/u=233997121,1829103342&fm=26&gp=0.jpg",
-                "username":'TC一TanChi',
-                "watchNum":'3990',
-                "menu":'2',
-                "zpNum":'1802'
+            "zp": {
+                "photo": "http://img1.imgtn.bdimg.com/it/u=233997121,1829103342&fm=26&gp=0.jpg",
+                "username": 'TC一TanChi',
+                "watchNum": '3990',
+                "menu": '2',
+                "zpNum": '1802'
             }
         },
         {
@@ -137,12 +137,12 @@ exports.pop = function (req, res) {
             },
             "title": "#24小时流行作品#",
             "des": "每张照片都有自己的故事",
-            "zp":{
-                "photo":"http://img0.imgtn.bdimg.com/it/u=3293635140,3955114282&fm=26&gp=0.jpg",
-                "username":'桃乐丝527',
-                "watchNum":'3990',
-                "menu":'10',
-                "zpNum":'2802'
+            "zp": {
+                "photo": "http://img0.imgtn.bdimg.com/it/u=3293635140,3955114282&fm=26&gp=0.jpg",
+                "username": '桃乐丝527',
+                "watchNum": '3990',
+                "menu": '10',
+                "zpNum": '2802'
             }
         },
         {
@@ -161,12 +161,12 @@ exports.pop = function (req, res) {
             },
             "title": "#24小时流行作品#",
             "des": "每张照片都有自己的故事",
-            "zp":{
-                "photo":"http://img1.imgtn.bdimg.com/it/u=3773645940,3042793859&fm=26&gp=0.jpg",
-                "username":'仙Reese',
-                "watchNum":'10990',
-                "menu":'67',
-                "zpNum":'809'
+            "zp": {
+                "photo": "http://img1.imgtn.bdimg.com/it/u=3773645940,3042793859&fm=26&gp=0.jpg",
+                "username": '仙Reese',
+                "watchNum": '10990',
+                "menu": '67',
+                "zpNum": '809'
             }
         },
         {
@@ -565,7 +565,7 @@ exports.detail = function (req, res) {
             }
 
             recipe.look_count = recipe.look_count + 1;
-            recipe.save(function(err) {
+            recipe.save(function (err) {
                 if (err) {
                     res.error(500, '数据库出错，' + err);
                     return;
@@ -626,30 +626,30 @@ exports.collection = function (req, res) {
         return;
     }
 
-    const RecipeCollection = req.models.RecipeCollection;
-    RecipeCollection.create({
+    const recipeCollection = req.models.recipeCollection;
+    recipeCollection.create({
         id: id,
         name: name,
         cover: cover,
         menu: collectionMenu,
         derection: collectionDerection,
-    }, (err, RecipeCollections) => {
+    }, (err, recipeCollection) => {
         if (err) {
             res.error(500, '数据库出错，' + err);
             return;
         }
-        res.success(RecipeCollections);
+        res.success(recipeCollection);
     });
 }
 
 // 获取收藏
 exports.getcollection = function (req, res) {
-    const RecipeCollection = req.models.RecipeCollection;
-    RecipeCollection.find((err, RecipeCollections) => {
+    const recipeCollection = req.models.recipeCollection;
+    recipeCollection.find((err, recipeCollection) => {
         if (err) {
             res.error(500, '数据库出错，' + err);
             return;
         }
-        res.success(RecipeCollections);
+        res.success(recipeCollection);
     });
 }

@@ -31,7 +31,7 @@ router.get('/recipe/getcollection', recipe.getcollection);
 /**
  * 评论相关的api
  */
-router.post('/comment/create', authMiddleware.auth, comment.create);  //结束时加上“      ” 重要
+router.post('/comment/create', authMiddleware.auth, comment.create);  //结束时加上“” 重要
 router.get('/comment/list', comment.list);
 
 
