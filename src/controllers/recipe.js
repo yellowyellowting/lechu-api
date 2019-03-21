@@ -28,7 +28,7 @@ exports.pop = function (req, res) {
         {
             "id": "103708642",
             "name": "香烤鸡翅",
-            "thumbnail": "http://i1.chuimg.com/af2a802a87e811e6a9a10242ac110002_800w_533h.jpg@2o_50sh_1pr_1l_660w_90q_1wh",
+            "thumbnail": "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3299300486,3781703317&fm=26&gp=0.jpg",
             "cookId": "120967814",
             "cookName": "博世家电",
             "stats": "11 做过",
@@ -52,7 +52,7 @@ exports.pop = function (req, res) {
         {
             "id": "103708643",
             "name": "平菇青椒炒鸡蛋 好吃又营养的超快手家常菜",
-            "thumbnail": "http://i1.chuimg.com/af2a802a87e811e6a9a10242ac110002_800w_533h.jpg@2o_50sh_1pr_1l_660w_90q_1wh",
+            "thumbnail": "http://img2.imgtn.bdimg.com/it/u=584721423,94481501&fm=26&gp=0.jpg",
             "cookId": "122079365",
             "cookName": "千寻树",
             "stats": "252 做过",
