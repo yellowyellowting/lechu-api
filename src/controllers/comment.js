@@ -5,6 +5,7 @@
 exports.create = function (req, res) {
     const content = req.body.content;
     const recipeId = req.body.recipeId;
+    const username = re.body.username;
     const userId = req.decoded.userId;
 
     if (!content) {
@@ -22,6 +23,7 @@ exports.create = function (req, res) {
         user_id: userId,
         recipe_id: recipeId,
         content: content,
+        user_name: username,
         created_at: new Date().getTime()
     }, (err, comment) => {
         if (err) {
@@ -52,6 +54,6 @@ exports.list = function (req, res) {
         }
 
         res.success(comments || []);
-        
+
     });
 }
