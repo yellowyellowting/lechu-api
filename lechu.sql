@@ -38,6 +38,7 @@ DROP TABLE IF EXISTS `recipe_comment`;
 CREATE TABLE `recipe_comment` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '菜谱评论ID',
   `user_id` varchar(255) NOT NULL COMMENT '菜谱评论者的用户ID',
+  `user_name` varchar(255) NOT NULL COMMENT '菜谱评论者的用户名',
   `recipe_id` bigint(20) NOT NULL COMMENT '菜谱ID',
   `content` varchar(255) NOT NULL COMMENT '菜谱评论内容',
   `created_at` bigint(20) NOT NULL COMMENT '菜谱评论创建时间',
