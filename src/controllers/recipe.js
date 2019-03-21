@@ -100,7 +100,7 @@ exports.pop = function (req, res) {
         {
             "id": "103708661",
             "name": "《Tinrry＋》Tinrry教你做分蛋海绵蛋糕",
-            "thumbnail": "http://i1.chuimg.com/fd297e11d67a4bc3b03e5597f3ec1637_770w_420h.jpg@2o_50sh_1pr_1l_660w_90q_1wh",
+            "thumbnail": "https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=788383578,3849208384&fm=26&gp=0.jpg",
             "cookId": "107144295",
             "cookName": "o橙小橙o",
             "stats": "179 做过",
@@ -205,7 +205,7 @@ exports.pop = function (req, res) {
         {
             "id": "103708650",
             "name": "香煎豆腐(烧烤铁板味)",
-            "thumbnail": "http://i1.chuimg.com/525d4bd7433d40698e99041ff55532da_1080w_810h.jpg@2o_50sh_1pr_1l_660w_90q_1wh",
+            "thumbnail": "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2263962881,2041257871&fm=26&gp=0.jpg",
             "cookId": "126334531",
             "cookName": "美丽女神经",
             "stats": "91 做过",
@@ -222,7 +222,7 @@ exports.pop = function (req, res) {
         {
             "id": "103708651",
             "name": "轻乳酪蛋糕（低油低糖版）",
-            "thumbnail": "http://i1.chuimg.com/ff1337128b4911e6a9a10242ac110002_1080w_1080h.jpg@2o_50sh_1pr_1l_660w_90q_1wh",
+            "thumbnail": "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2947466538,3540952512&fm=26&gp=0.jpg",
             "cookId": "105784662",
             "cookName": "糯米的厨房",
             "stats": "195 做过",
