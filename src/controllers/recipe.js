@@ -293,7 +293,7 @@ exports.pop = function (req, res) {
             "thumbnail": "http://i2.chuimg.com/28c1c0228a9d11e6a9a10242ac110002_1000w_667h.jpg?imageView2/2/w/660/interlace/1/q/90",
             "cookId": "122079365",
             "cookName": "千寻树",
-            "stats": "252 做过",
+            "stats": "253 做过",
             "dishScore": 9.3,
             "dishStuff": "猪肉,番茄,米饭,电饭锅",
             "img": {
