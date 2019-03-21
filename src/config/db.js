@@ -4,7 +4,7 @@ const db = {
     username: 'root',
     password: '123456',
     database: 'lechu',
-    useConnectionPooling: true
+    // useConnectionPooling: true
 };
 
 module.exports = db;
